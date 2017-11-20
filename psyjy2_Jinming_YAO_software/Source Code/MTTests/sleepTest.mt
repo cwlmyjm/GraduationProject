@@ -1,0 +1,17 @@
+begin
+	putchr('1');
+	putchr('\n');
+	sleep(1000);
+	putchr('2');
+	putchr('\n');
+	sleep(2000);
+	putchr('3');
+	putchr('\n');
+	sleep(3000);
+	putchr('4');
+	putchr('\n');
+	sleep(5000);
+	putchr('5');
+	putchr('\n');
+	sleep(5000)
+end

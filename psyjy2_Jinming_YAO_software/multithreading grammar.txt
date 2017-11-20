@@ -1,0 +1,31 @@
+This file introduces the multithreading grammar in the exteded Mini-Triangle:
+
+	threadStart(thread id : Integer Expression, Command) : Command
+	threadWait(thread id : Integer Expression) : Command
+	threadCancel(thread id : Integer Expression) : Command
+	threadLock(mutual lock : Integer Expression) : Command
+	threadUnlock(mutual lock : Integer Expression) : Command
+	semPost(sem value : Integer Expression) : Command
+	semWait(sem value : Integer Expression) : Command
+	sleep(time value : Integer Expression) : Command
+
+For example, the following is one simple example of creating a thread:
+
+	let
+		var id : Integer := 100;
+		proc f() 
+		let
+			var p : Integer := 2010;
+			var q : Integer := 2013
+		in
+			begin
+				p := q + 1;
+				q := q + q
+			end
+	in
+		begin
+			threadStart(id,f());
+			threadWait(id)
+		end
+
+The main thread creates a new thread and waits for it.
