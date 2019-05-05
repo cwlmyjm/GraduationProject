@@ -1,2 +1,1 @@
-#GraduationProject
-Concurrency In Mini-Triangle
+# GraduationProject - Concurrency In Mini-Triangle
